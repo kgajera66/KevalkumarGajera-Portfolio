@@ -4,7 +4,7 @@ Portfolio showcasing data analysis, machine learning, SQL, and Power BI projects
 
 ## Projects Included
 
-1. **[ML Multiple Election Winners Predictor]**
+1. **[ML Multiple Election Winners Predictor(./ML-Multiple-Election-Winners-Predictor)**
    Machine Learning model to predict election rankings using the Kemeny-Young method. Achieved 87% accuracy.
 
 ---
