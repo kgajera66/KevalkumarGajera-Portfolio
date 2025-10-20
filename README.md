@@ -7,7 +7,7 @@ Portfolio showcasing data analysis, machine learning, SQL, and Power BI projects
 1. **[ML Multiple Election Winners Predictor](./ML-Multiple-Election-Winners-Predictor)**  
    Machine Learning model to predict election rankings using the Kemeny-Young method. Achieved 87% accuracy.
 
-2. **[SQL Netflix Expert Analysis](./SQL-Netflix-Expert-Analysis)**  
+2. **[SQL Netflix Analysis](./SQL-Netflix-Analysis)**  
    Advanced SQL data analysis project using PostgreSQL to explore Netflix content trends. Includes 10 expert-level analytical queries with insights on genres, countries, directors, and content performance.
 
 ---
