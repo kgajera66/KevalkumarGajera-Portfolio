@@ -1,7 +1,7 @@
 # Kemeny-Young Method-Based ML for Ranked-Choice Voting
 
 ## Project Overview
-This project implements a complete machine learning pipeline to analyze ranked-choice voting data, predict the single winner, and determine the full rank order of 8 candidates. The core innovation is using the **Kemeny-Young voting system** to generate ground-truth labels and rankings for training and validating classification models.
+This project implements a complete machine learning pipeline to analyze ranked-choice voting data, predict the single winner, and determine the full rank order of candidates. The core innovation is using the **Kemeny-Young voting system** to generate ground-truth labels and rankings for training and validating classification models.
 
 ## Key Features
 * **Data Preparation:** Preprocessing of raw electoral preference data, including imputation and transformation of 8-candidate data into a 7-candidate format.
