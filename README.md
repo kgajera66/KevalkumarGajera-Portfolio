@@ -10,6 +10,10 @@ Portfolio showcasing data analysis, machine learning, SQL, and Power BI projects
 2. **[SQL Netflix Analysis](./SQL-Netflix-Analysis)**  
    Advanced SQL data analysis project using PostgreSQL to explore Netflix content trends. Includes 10 expert-level analytical queries with insights on genres, countries, directors, and content performance.
 
+3. **[Telecom Network Data Analysis](./Telecom-Data-Analysis)**  
+   Comprehensive data analysis project on telecom network performance using Python (Pandas, NumPy, Matplotlib, Scikit-learn). Includes data cleaning, exploratory analysis, anomaly detection (IsolationForest), and actionable insights for signal quality, latency, and data usage optimization.
+
+
 ---
 
 This portfolio demonstrates my ability to turn raw data into actionable insights, develop dashboards, perform data analysis, and implement machine learning models.  
