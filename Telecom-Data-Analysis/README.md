@@ -4,8 +4,8 @@ This folder contains a Jupyter notebook and outputs for a telecom data analysis 
 
 ## Files
 - `telecom_data_analysis.ipynb`: Jupyter notebook with analysis (cleaning, feature engineering, IsolationForest, Q1-Q10).
-- `telecom_expert_notebook_outputs/`: Output folder created when running the notebook (CSVs, JSONs, PNGs).
-- `telecom_data_large.csv`: Input dataset (place this file at the path `/mnt/data/telecom_data_large.csv` or adjust the notebook).
+- `telecom_notebook_outputs/`: Output created when running the notebook (CSVs, JSONs, PNGs).
+- `telecom_data_dataset.csv`: Input dataset (place this file at the path `/mnt/data/telecom_data_large.csv` or adjust the notebook).
 
 ## How to run
 1. Install required packages:
