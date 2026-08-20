@@ -1,0 +1,5 @@
+requests
+pandas
+dbt-snowflake
+snowflake-connector-python
+anthropic
