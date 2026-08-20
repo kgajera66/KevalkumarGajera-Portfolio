@@ -14,7 +14,7 @@ Portfolio showcasing data analysis, machine learning, SQL, and Power BI projects
    Comprehensive data analysis project on telecom network performance using Python (Pandas, NumPy, Matplotlib, Scikit-learn). Includes data cleaning, exploratory analysis, anomaly detection (IsolationForest), and actionable insights for signal quality, latency, and data usage optimization.
 
 4. **[German Electricity Market Analytics](./German-Electricity-Market-Analytics)**
-End-to-end data pipeline analyzing German electricity generation, consumption, and day-ahead pricing using SMARD.de public data. Built with Python, Snowflake, dbt (staging/intermediate/marts with automated tests), and Power BI, plus a Claude-powered natural language-to-SQL agent for querying the data with built-in safety guardrails.
+   End-to-end data pipeline analyzing German electricity generation, consumption, and day-ahead pricing using SMARD.de public data. Built with Python, Snowflake, dbt (staging/intermediate/marts with automated tests), and Power BI, plus a Claude-powered natural language-to-SQL agent for querying the data with built-in safety guardrails.
 ---
 
 This portfolio demonstrates my ability to turn raw data into actionable insights, develop dashboards, perform data analysis, and implement machine learning models.  
