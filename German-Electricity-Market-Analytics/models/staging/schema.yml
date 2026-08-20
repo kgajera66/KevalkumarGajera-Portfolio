@@ -1,1 +1,43 @@
+# models/staging/schema.yml
+#
+# WHY tests matter here: without them, a broken pipeline fails silently --
+# you'd only notice something's wrong when a chart in Power BI looks weird,
+# days later, with no clue which layer broke it. Tests fail LOUDLY and
+# immediately at `dbt test`, and they point at the exact model and column.
+
+version: 2
+
+models:
+  - name: stg_generation
+    description: "Cleaned hourly generation data by source, with total and renewable share calculated."
+    columns:
+      - name: timestamp_utc
+        tests:
+          - not_null
+          - unique
+      - name: total_generation_mw
+        tests:
+          - not_null
+
+  - name: stg_consumption
+    description: "Cleaned hourly total grid load."
+    columns:
+      - name: timestamp_utc
+        tests:
+          - not_null
+          - unique
+      - name: total_load_mw
+        tests:
+          - not_null
+
+  - name: stg_price
+    description: "Cleaned hourly day-ahead electricity price, with a negative-price flag."
+    columns:
+      - name: timestamp_utc
+        tests:
+          - not_null
+          - unique
+      - name: day_ahead_price_eur_mwh
+        tests:
+          - not_null
 
