@@ -4,7 +4,7 @@ An end-to-end data pipeline analyzing Germany's electricity generation, consumpt
 and day-ahead pricing — built on real public data from SMARD.de (Bundesnetzagentur),
 with a natural-language query agent on top.
 
-## Why this project
+## Why this project 
 
 Germany's energy transition (Energiewende) is producing genuinely interesting,
 messy, real-world data: renewable generation swings hour to hour with weather,
