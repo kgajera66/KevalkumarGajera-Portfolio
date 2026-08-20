@@ -1,1 +1,18 @@
+# ============================================================
+# models/staging/sources.yml
+# ============================================================
+
+version: 2
+
+sources:
+  - name: raw
+    database: GERMAN_ENERGY
+    schema: RAW
+    tables:
+      - name: raw_generation
+        description: "Hourly electricity generation by source, from SMARD.de"
+      - name: raw_consumption
+        description: "Hourly total grid load (Netzlast), from SMARD.de"
+      - name: raw_price
+        description: "Hourly day-ahead electricity price (EUR/MWh) for DE/LU, from SMARD.de"
 
