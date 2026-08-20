@@ -1,5 +1,5 @@
 -- models/marts/negative_price_events.sql
---
+--   
 -- Grain: one row per hour where the price went negative.
 
 with hourly as (
