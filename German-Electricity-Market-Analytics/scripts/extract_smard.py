@@ -5,17 +5,6 @@ SMARD.de Electricity Market Data Extractor
 Downloads German electricity generation, consumption, and price data
 from the Bundesnetzagentur's SMARD platform and saves it as clean CSVs
 ready to load into Snowflake.
-
-Why this design:
-- SMARD splits data into weekly/monthly JSON "chunks" identified by a
-  millisecond timestamp. I first fetch the INDEX (list of available
-  chunk timestamps), then fetch each chunk's actual data.
-- I separate generation / consumption / price into their own files
-  (mirrors how you'll model them as separate staging tables in dbt).
-- Timestamps come back as Unix milliseconds in UTC — I convert to
-  proper datetime early, because getting timezone handling right BEFORE
-  loading into the warehouse saves painful debugging later (Germany
-  has DST switches, which is a classic gotcha in energy data).
 """
 
 import requests
