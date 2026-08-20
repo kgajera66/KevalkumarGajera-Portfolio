@@ -40,7 +40,7 @@ SNOWFLAKE_CONFIG = {
     "password": os.environ.get("SNOWFLAKE_PASSWORD", "<your_password>"),
     "warehouse": "ENERGY_WH",
     "database": "GERMAN_ENERGY",
-    "schema": "DBT_STAGING",   # adjust if your dbt schema config differs
+    "schema": "DBT_STAGING", 
 }
 
 # Never hardcode this -- set it as an environment variable instead:
