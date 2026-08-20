@@ -1,1 +1,38 @@
+version: 2
+
+models:
+  - name: int_energy_hourly
+    description: "Hourly join of generation, consumption, and price -- the single source every mart builds from."
+    columns:
+      - name: timestamp_utc
+        tests:
+          - not_null
+          - unique
+
+  - name: daily_energy_mix
+    description: "One row per day: average generation mix, load, renewable share, and price stats. Powers the main trend dashboard."
+    columns:
+      - name: report_date
+        tests:
+          - not_null
+          - unique
+      - name: renewable_share
+        tests:
+          - not_null
+
+  - name: price_by_hour_of_day
+    description: "One row per hour-of-day (0-23), averaged across the full window. Powers the renewable-vs-price relationship chart."
+    columns:
+      - name: hour_of_day
+        tests:
+          - not_null
+          - unique
+
+  - name: negative_price_events
+    description: "One row per hour where day-ahead price went negative, with generation/load context."
+    columns:
+      - name: timestamp_local
+        tests:
+          - not_null
+          - unique
 
