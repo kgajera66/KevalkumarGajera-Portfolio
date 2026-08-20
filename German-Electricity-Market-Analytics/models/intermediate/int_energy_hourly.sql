@@ -4,7 +4,7 @@ with generation as (
 
     select * from {{ ref('stg_generation') }}
 
-),
+),   
 
 consumption as (
 
