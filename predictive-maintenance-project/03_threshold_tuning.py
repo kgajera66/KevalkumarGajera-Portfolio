@@ -4,12 +4,6 @@
 The model doesn't actually output "failure" or "no failure" -- it outputs
 a PROBABILITY (0 to 1) that a machine will fail. scikit-learn's default
 .predict() just applies a 0.5 cutoff: probability > 0.5 = "failure".
-
-But 0.5 is an arbitrary default, not a business decision. This script
-shows what happens to precision/recall as you slide that cutoff --
-so YOU can pick a threshold based on what actually costs more: missed
-failures or false alarms. This is a genuinely important real-world
-concept: the model doesn't decide the trade-off, the business context does.
 """
 
 import pandas as pd
@@ -50,11 +44,3 @@ for threshold in [0.20, 0.30, 0.40, 0.50, 0.60, 0.70, 0.80]:
 
     print(f"{threshold:>10.2f} {precision:>10.2f} {recall:>10.2f} {f1:>10.2f} "
           f"{true_positives:>16} {false_positives:>14}")
-
-# WHY show a table across many thresholds instead of picking one:
-# this IS the deliverable for a business conversation. You'd bring this
-# table to a maintenance manager and ask "how many false alarms per
-# caught failure are you willing to tolerate?" -- their answer picks
-# the threshold, not a data scientist's default. This table is also a
-# great thing to include directly in your project README or show live
-# in an interview.
