@@ -4,21 +4,13 @@
 Generates predictions for every machine in the test set (using our
 chosen threshold, not scikit-learn's default 0.5) and saves everything
 to a CSV that Power BI can connect to directly.
-
-WHY export to CSV instead of connecting Power BI to Python directly:
-Power BI doesn't run Python models live in a dashboard -- it visualizes
-data. So the real-world pattern is: Python does the modeling/scoring,
-writes RESULTS to a file or database, and Power BI visualizes those
-results. This mirrors exactly how a production system would work too --
-a scheduled Python job scores machines periodically and writes to a
-table; a dashboard just reads the latest scores.
 """
 
 import pandas as pd
 from sklearn.model_selection import train_test_split
 import joblib
 
-CHOSEN_THRESHOLD = 0.40  # change this if you want a different threshold
+CHOSEN_THRESHOLD = 0.40 
 
 df = pd.read_csv("data/ai4i2020.csv")
 
@@ -42,7 +34,7 @@ y_proba = model.predict_proba(X_test)[:, 1]
 y_pred_at_threshold = (y_proba >= CHOSEN_THRESHOLD).astype(int)
 
 # Rebuild a results table using the ORIGINAL columns (with real Product
-# ID and Type as text, not encoded numbers) -- Power BI users want
+# ID and Type as text, not encoded numbers) - Power BI users want
 # readable labels, not the numeric encoding we needed for the model.
 results = df.loc[X_test.index, ["Product ID", "Type", "Air temperature [K]",
                                   "Process temperature [K]", "Rotational speed [rpm]",
@@ -53,8 +45,7 @@ results["predicted_failure_probability"] = y_proba
 results["predicted_failure"] = y_pred_at_threshold
 results["threshold_used"] = CHOSEN_THRESHOLD
 
-# A readable label for dashboard filters/visuals -- easier for a
-# non-technical viewer to scan than raw 0/1 columns.
+# A readable label for dashboard filters/visuals.
 results["prediction_outcome"] = results.apply(
     lambda row: (
         "True Positive (caught)" if row["predicted_failure"] == 1 and row["actual_failure"] == 1
