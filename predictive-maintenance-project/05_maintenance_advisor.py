@@ -5,16 +5,6 @@ Takes a flagged machine (predicted at-risk) and asks Claude to explain,
 in plain language, why it was flagged and what a technician should
 check first -- grounded in the machine's actual sensor readings and the
 model's feature importances, not generic advice.
-
-WHY this is a stronger "agentic" example than a simple Q&A wrapper:
-the LLM here isn't just answering a question -- it's given a specific
-STRUCTURED CONTEXT (this machine's numbers + which sensors the model
-trusts most) and asked to REASON from that context to a recommendation.
-This is closer to how a real maintenance-advisory agent would work:
-grounded in actual data, not just general knowledge. It's also a good
-example of "AI for employee empowerment" -- turning a raw model output
-into something a technician (who may not know what a Random Forest is)
-can actually act on.
 """
 
 import os
@@ -23,9 +13,7 @@ import anthropic
 
 ANTHROPIC_API_KEY = os.environ.get("ANTHROPIC_API_KEY")
 
-# Reference values -- computed earlier from the healthy-machine population.
-# Hardcoded here for simplicity; in a bigger system these would be
-# pulled from the training data automatically.
+# Reference values -- computed earlier from the healthy-machine population..
 HEALTHY_AVERAGES = {
     "Torque [Nm]": 39.63,
     "Tool wear [min]": 106.69,
@@ -102,9 +90,7 @@ translate that into practical terms."""
 if __name__ == "__main__":
     df = pd.read_csv("predictions_for_powerbi.csv")
 
-    # Grab a few flagged machines to demonstrate on -- both correctly
-    # caught failures and false alarms, since seeing how the advisor
-    # handles both is a useful thing to show in an interview.
+    # Grab a few flagged machines to demonstrate on -- both correctly caught failures and false alarms
     flagged = df[df["predicted_failure"] == 1].head(3)
 
     for _, machine in flagged.iterrows():
