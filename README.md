@@ -16,7 +16,7 @@ Portfolio showcasing data analysis, machine learning, SQL, and Power BI projects
 4. **[German Electricity Market Analytics](./German-Electricity-Market-Analytics)**
    End-to-end data pipeline analyzing German electricity generation, consumption, and day-ahead pricing using SMARD.de public data. Built with Python, Snowflake, dbt (staging/intermediate/marts with automated tests), and Power BI, plus a Claude-powered natural language-to-SQL agent for querying the data with built-in safety guardrails.
 
-5. **[Predictive Maintenance for Industrial Machinery](./Predictive-Maintenance-for-Industrial-Machinery)**
+5. **[Predictive Maintenance for Industrial Machinery](./predictive-maintenance-project)**
    Machine learning system predicting equipment failure from sensor data (AI4I 2020 dataset) using Python and a Random Forest classifier, with careful handling of severe class imbalance (85% recall at a deliberately chosen threshold). Includes a Power BI dashboard and a Claude-powered advisory agent that translates model predictions into plain-language, technician-facing maintenance recommendations.
 
 ---
