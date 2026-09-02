@@ -18,10 +18,7 @@ collection = client.get_collection(name="maintenance_manuals")
 def answer_question(question: str, n_results: int = 2) -> str:
     # ============================================================
     # STEP 1: Embed the question with the SAME embedding model used
-    # for the manuals. This is essential -- embeddings from different
-    # models aren't comparable to each other, like trying to compare
-    # distances measured in miles against distances measured in km
-    # without converting first.
+    # for the manuals.
     # ============================================================
     question_embedding = ollama.embeddings(
         model="nomic-embed-text", prompt=question
@@ -46,7 +43,7 @@ def answer_question(question: str, n_results: int = 2) -> str:
     # This is the critical RAG instruction: "answer using ONLY the
     # provided context" stops the model from blending in its own
     # general training knowledge, which might be subtly wrong for
-    # YOUR specific equipment and thresholds.
+    # specific equipment and thresholds.
     # ============================================================
     prompt = f"""You are a maintenance assistant. Answer the technician's
 question using ONLY the manual excerpts below. If the excerpts don't
