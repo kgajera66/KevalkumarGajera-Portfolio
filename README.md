@@ -1,5 +1,5 @@
 # KevalkumarGajera-Portfolio
-Portfolio showcasing data analysis, machine learning, SQL, and Power BI projects. Includes real-world and example projects demonstrating Python, SQL (Snowflake, PostgreSQL), dbt, and visualization skills.
+Portfolio of data engineering, machine learning, and applied AI projects — including end-to-end pipelines (Python, SQL, Snowflake, dbt), predictive modeling, Power BI dashboards, and AI agents built with both cloud (Claude API) and local (Ollama, RAG) models.
 
 
 ## Projects Included
