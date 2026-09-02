@@ -158,6 +158,13 @@ python 02_build_model.py
 python 03_threshold_tuning.py
 python 04_export_predictions.py
 python 05_maintenance_advisor.py
+
+# Install Ollama (ollama.com), then:
+ollama pull llama3.1:8b
+ollama pull nomic-embed-text
+
+pip install chromadb ollama
+
 python 06_rag_ingest.py    # run once, or whenever manuals change
 python 07_rag_query.py     # run queries
 ```
