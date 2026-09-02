@@ -4,3 +4,9 @@ matplotlib
 seaborn
 joblib
 anthropic
+
+# Install Ollama (ollama.com), then:
+ollama pull llama3.1:8b
+ollama pull nomic-embed-text
+chromadb ollama
+
