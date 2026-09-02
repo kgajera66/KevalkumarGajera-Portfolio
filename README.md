@@ -17,7 +17,7 @@ Portfolio showcasing data analysis, machine learning, SQL, and Power BI projects
    End-to-end data pipeline analyzing German electricity generation, consumption, and day-ahead pricing using SMARD.de public data. Built with Python, Snowflake, dbt (staging/intermediate/marts with automated tests), and Power BI, plus a Claude-powered natural language-to-SQL agent for querying the data with built-in safety guardrails.
 
 5. **[Predictive Maintenance for Industrial Machinery](./predictive-maintenance-project)**
-   Machine learning system predicting equipment failure from sensor data (AI4I 2020 dataset) using Python and a Random Forest classifier, with careful handling of severe class imbalance (85% recall at a deliberately chosen threshold). Includes a Power BI dashboard and a Claude-powered advisory agent that translates model predictions into plain-language, technician-facing maintenance recommendations.
+   Machine learning system predicting equipment failure from sensor data (AI4I 2020 dataset) using a Random Forest classifier, with careful handling of severe class imbalance (85% recall at a deliberately chosen threshold). Includes a Power BI dashboard, a Claude-powered advisory agent translating predictions into plain-language maintenance guidance, and a fully offline local RAG system (Ollama + ChromaDB) answering technician questions from maintenance manuals — including a documented finding on the retrieval-vs-reasoning trade-off between local and cloud models.
 
 ---
  
